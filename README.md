@@ -9,7 +9,7 @@ The [Project Outline](/docs/project-outline.pdf) provided the business context f
 
 ## Requirements
 
-Requirements were elicited from the project outline and captured in the [specification](/docs/specification.txt). Requirements for sound design and industry best practices were also included. Each requirement was assigned a priority (indicating its importance to the final product, aiding in task prioritization) and a category (e.g., related to design, security, core functionality, etc.).
+Requirements were elicited from the project outline and captured in the [Specification](/docs/specification.csv). Requirements for sound design and industry best practices were also included. Each requirement was assigned a priority (indicating its importance to the final product, aiding in task prioritization) and a category (e.g., related to design, security, core functionality, etc.).
 
 ## Design
 
