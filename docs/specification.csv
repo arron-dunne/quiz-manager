@@ -1,0 +1,54 @@
+Requirement,Category,Priority
+The Home Page must show the user all the quizzes stored,Core,High
+The Quiz Page must show the user all the questions for a specific quiz,Core,High
+The Question Page must show the user all the answers for a specific question,Core,High
+Questions must be associated with a single quiz,Core,High
+Questions should have between 3-5 answers,Core,Medium
+Answers must be associated with a single question,Core,High
+Question must be indexed with numbers,Core,High
+"Question can be added, edited or deleted",Core,Medium
+"Quizzes can be added, edited or deleted",Core,Medium
+"Answers can be added, edited or deleted",Core,Medium
+Answers must be indexed with uppercase letters,Core,High
+"When an question or answer is added or deleted, the indexing should automatically update",Core,Medium
+"The UI should have easily changeable colour scheme, font and styles",Design,Medium
+The UI should have easily changeable title and logo,Design,Medium
+The UI must support desktop screen sizes,Design,High
+The UI should support mobile screen sizes,Design,Medium
+The UI must be easy to read and use,Design,High
+The UI should indicate to the user if they are logged in or not,Design,Medium
+"If all the items on a page cannot fit the screen, the UI must let the user scroll to see more",Design,High
+Data must be stored in a persistent database,Data,High
+The data must include user information,Data,High
+The data must include quiz information,Data,High
+The data must include question information,Data,High
+The data must include answer information,Data,High
+"When a quiz is deleted, all the questions and answers for that quiz should also be deleted",Data,Medium
+"When a question is deleted, all the answers for that question should also be deleted",Data,Medium
+The application must allow users to log in and log out,Users,High
+"If a user is logged out, they cannot access the Home Page, Quiz Page or Question Page",Users,High
+"If a user is logged out, any pages they access will redirect them to the Login Page",Navigation,Medium
+Only preconfigured users can log in,Users,Medium
+"When a user is logged in, the website shall maintain user session state",Users,Medium
+"Every user must have a permission of either edit, view or restricted",Users,Medium
+"Users with restricted, view or edit permission can view the quizzes and questions",Users,Medium
+Users with view or edit permission can view answers,Users,Medium
+"Users with edit permission can add, edit and delete quizzes, questions, and answers",Users,Medium
+Users cannot perform any operations above their permission level,Users,Medium
+Users can log out from any page,Navigation,Medium
+Users can go to the home page from any page,Navigation,Medium
+"When a user clicks on a quiz name on the Home Page, they will be taken to the Quiz Page for the selected quiz",Navigation,High
+"When a user (with correct permission) clicks on a question on the Quiz Page, they will be taken the Question Page for the selected question",Navigation,High
+The application must be unit tested,Testing,High
+The unit testing should have maximum code coverage,Testing,Medium
+The application must be manually tested,Testing,High
+"If a user tries to access a page they are not authorised for, they’ll receive a 403 HTTP Error",Error Handling,Medium
+"If a user tries to access a page which doesn’t exist, they’ll receive a 404 HTTP Error",Error Handling,Medium
+"If the application fails, users should be given a 500 HTTP Error",Error Handling,Medium
+The application must not crash for any users inputs,Error Handling,High
+Error pages must match the layout and design of the website,Design,Low
+The application shall be protected from SQL injection,Security,Medium
+Passwords will be hashed when stored,Security,Medium
+The application should be easy to deploy,Deployment,Medium
+The application should have sufficient documentation,Deployment,Medium
+The application should be publicly available,Deployment,Medium

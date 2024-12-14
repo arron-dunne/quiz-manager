@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="nav-group">
+            <img src="{{ url_for('static', filename='logo.png') }}" height="50px" width="50px">
+            <h1 class="nav-text nav-title">Quiz Manager</h1>
+        </div>
+        <div class="nav-group">
+            {% if g.user %}
+                <p class="nav-text">Hello, {{ g.user['username'] }}</p>
+                <a class="menu-button nav-button" href="{{ url_for('quiz_manager.logout') }}">Log Out</a>
+                <a class="menu-button nav-button" href="{{ url_for('quiz_manager.home') }}">Home</a>
+            {% endif %}
+        </div>
+    </nav>
+    <section class="content">
+        <header>
+            {% block header %}{% endblock %}
+        </header>
+        {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+        {% block content %}{% endblock %}
+    </section>
+</body>
+</html>

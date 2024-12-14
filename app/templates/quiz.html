@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{{quiz['title']}}</h1>
+{% endblock %}
+
+{% block content %}
+    <ol>
+    {% for question in questions %}
+        <div class="list-row">
+            <li>
+                {% if g.user['permission'] == 'restricted' %}
+                    <span>{{question['question']}}</span>
+                {% else %}
+                    <a href="{{url_for('quiz_manager.question', quiz_id=quiz['quiz_id'], question_id=question['question_id'])}}">{{question['question']}}</a>
+                {% endif %}
+            </li>
+            <div class="button-group">
+                {% if g.user['permission'] == 'edit' %}
+                    <a class="menu-button" href="{{url_for('quiz_manager.edit_question', quiz_id=quiz['quiz_id'], question_id=question['question_id'])}}">Edit</a>
+                    <a class="menu-button" href="{{url_for('quiz_manager.delete_question', quiz_id=quiz['quiz_id'], question_id=question['question_id'])}}">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </ol>
+    <div>
+        {% if g.user['permission'] == 'edit' %}
+            <a class="menu-button" href="{{url_for('quiz_manager.add_question', quiz_id=quiz['quiz_id'])}}">Add Question</a>
+        {% endif %}
+    </div>
+{% endblock %}

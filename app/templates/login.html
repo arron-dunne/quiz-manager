@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Log In{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <div class="input-group">
+        <label>Username:</label>
+        <input type="text" name="username" required></input>
+    </div>
+    <div class="input-group">
+        <label>Password:</label>
+        <input type="password" name="password" required></input>
+    </div>
+    <button class="menu-button">Login</button>
+    <div class="flash info">
+        <p><b>Hello and welcome to Quiz Manager!</b></p>
+        <p>Quiz Manager is a web application for saving quizzes and lets users view them through an online portal.</p>
+        <p>There are 3 available users, each with a different level of permission:</p>
+        <ul>
+            <li><p><b>restrictedUser:</b> view quizzes and questions, but not answers</p></li>
+            <li><p><b>user:</b> view all quizzes, questions and answers</p></li>
+            <li><p><b>admin:</b> same as user but also has permission to add, modify and delete data</p></li>
+        </ul>
+        <p>The password for all users is "<b>password</b>".</p>
+        <p>Any changes made will be persisted in the database. The database will be reset back to its original state every 24 hours.</p>
+        <p>For more information please see the <a>GitHub repository</a>.</p>
+    </div>
+</form>
+{% endblock %}

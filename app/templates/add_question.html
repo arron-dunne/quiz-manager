@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Add Question{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div class="input-group">
+            <label>Question:</label>
+            <input type="text" name="question" required></input>
+        </div>
+        <button class="menu-button">Save</button>
+    </form>
+{% endblock %}

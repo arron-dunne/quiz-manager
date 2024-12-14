@@ -1,0 +1,145 @@
+html {
+    font-family: sans-serif;
+    background: #eee; 
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+h1 {
+    color: #377ba8;
+    margin: 0;
+}
+
+p { 
+    margin: 0;
+}
+
+ul {
+    padding-left: 5%;
+}
+
+ol {
+    padding-left: 8%;
+}
+
+nav {
+    background: #377ba8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-title {
+    padding: 0rem 0.5rem;
+}
+.nav-button {
+    background-color: hsl(204, 70%, 79%) !important;
+}
+
+.nav-text {
+    color: white;
+}
+
+.content {
+    padding: 2rem;
+}
+.content > header {
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #377ba8;
+}
+
+.info p {
+    padding-bottom: 1rem;
+}
+.info ul {
+    margin: 0px;
+}
+
+.list-row {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-description {
+    margin-top: 0.5rem;
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+.menu-button {
+    background-color: rgb(219, 219, 219);
+    color: black;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;    
+    font-size: 0.875em;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+}
+.menu-button:hover {
+    filter: brightness(0.90)
+}
+.menu-button:active {
+    filter: brightness(0.75)
+}
+
+.input-group {
+    vertical-align: top;
+    padding: 0px 10% 1rem 5%;
+}
+.input-group:first-child {
+    padding-top: 0.5rem;
+}
+.input-group > label {
+    vertical-align: top;
+    display: inline-block;
+    width: 6.5rem;
+    padding-top: 0.25rem;
+    font-weight: bold;
+}
+.input-group > input, textarea {
+    font: inherit;
+    width:100%;
+    max-width: 15rem;
+    font-size: 0.875rem; /* 14px */
+    margin: none;
+    padding: 0.25rem;
+    resize: vertical;
+}
