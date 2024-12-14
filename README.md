@@ -9,7 +9,7 @@ The [Project Outline](/docs/project-outline.pdf) provided the business context f
 
 ## Requirements
 
-Requirements were elicited from the project outline and captured in the specification. Requirements for sound design and industry best practices were also included. Each requirement was assigned a priority (indicating its importance to the final product, aiding in task prioritization) and a category (e.g., related to design, security, core functionality, etc.).
+Requirements were elicited from the project outline and captured in the [specification](/docs/specification.txt). Requirements for sound design and industry best practices were also included. Each requirement was assigned a priority (indicating its importance to the final product, aiding in task prioritization) and a category (e.g., related to design, security, core functionality, etc.).
 
 ## Design
 
@@ -35,8 +35,8 @@ Both manual and automated testing were used to ensure the app met the requiremen
 
 Python's [Pytest](https://docs.pytest.org/en/stable/) module was used to write unit tests and execute them. Pytest integrates well with Flask apps and was the recommended testing framework for this project. The [Coverage](https://coverage.readthedocs.io/en/7.6.9/) module was used to collect test coverage data.
 
-All tests are located in the `tests/` directory. To run the test suite, use the following commands:
-- `coverage run -m pytest` (ensure all dependencies are installed).
+All tests are located in the `/tests/` directory. To run the test suite, use the following commands:
+- `coverage run -m pytest` (ensure virtual environment is active with all dependencies installed).
 - `coverage report` to view test coverage statistics.
 
 ### Manual Testing
@@ -49,7 +49,7 @@ For more details on the test plan results, see the [Test Plan](/docs/test-plan.p
 
 The application can be deployed locally using the code in this repository.
 1. Clone the repository and navigate to the root folder.
-2. Execute `source setup.sh` to set up a virtual environment, install the necessary pip modules, initialize the database, and create a private key (this key can be changed). The database is created at `instance/database.db`.
+2. Execute `source setup.sh` to set up a virtual environment, install the necessary pip modules, initialize the database, and create a private key (this key can be changed). The database is created at `/instance/database.db`.
 3. Execute `flask run` (inside the virtual environment) to launch the application locally.
 
 A live deployment of the app is available [HERE](https://arrond.pythonanywhere.com).
